@@ -1,12 +1,11 @@
 @use '../abstracts';
 
 .hero {
-
-    @include abstracts.big-device {
-        display: grid;
-        grid-template-columns: 27.4% auto 27.4%;
-        align-items: center;
-    }
+	@include abstracts.big-device {
+		display: grid;
+		grid-template-columns: 27.4% auto 27.4%;
+		align-items: center;
+	}
 
 	&__images {
 		@include abstracts.small-device {
@@ -29,21 +28,21 @@
 			height: auto;
 		}
 
-        &:first-child {
-            @include abstracts.big-device {
-                position: relative;
-                left: -6%;
-            }
+		&--first {
+			@include abstracts.big-device {
+				position: relative;
+				left: -6%;
+			}
 		}
 
-		&:last-child {
+		&--last {
 			@include abstracts.medium-device-max {
 				display: none;
 			}
-            @include abstracts.big-device {
-                position: relative;
-                right: -6%;
-            }
+			@include abstracts.big-device {
+				position: relative;
+				right: -6%;
+			}
 		}
 	}
 
@@ -89,6 +88,16 @@
 		@include abstracts.big-device {
 			@include abstracts.text-preset-4-2;
 			margin-top: abstracts.$spacing-400;
+		}
+	}
+
+	&__actions {
+		margin-top: abstracts.$spacing-300;
+
+		.button {
+			& + .button {
+				margin-top: abstracts.$spacing-200;
+			}
 		}
 	}
 }

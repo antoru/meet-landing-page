@@ -1,0 +1,20 @@
+@use '../abstracts';
+
+.button {
+	color: abstracts.$White;
+	font-family: 'Red Hat Display';
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 150%; /* 24px */
+    border-radius: 28px;
+
+	padding: abstracts.$spacing-200 abstracts.$spacing-500;
+
+	&--blue {
+		background-color: abstracts.$Cyan-600;
+	}
+	&--purple {
+		background-color: abstracts.$Purple-600;
+	}
+}
