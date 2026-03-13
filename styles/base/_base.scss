@@ -10,6 +10,11 @@ html {
 	font-size: 62.5%;
 	user-select: none;
 	background: #f6f5f6;
+	overflow-x: hidden;
+
+	body {
+		overflow-x: hidden;
+	}
 }
 
 /**

@@ -5,39 +5,77 @@
 @use './variables';
 
 @mixin text-preset-1 {
-	/* text-preset-1 */
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-size: 2rem;
+	color: variables.$Slate-900;
+	font-family: 'Red Hat Display';
+	font-size: 6.4rem;
 	font-style: normal;
-	font-weight: 600;
-	line-height: 120%; /* 24px */
+	font-weight: 900;
+	line-height: 110%; /* 70.4px */
+}
+
+@mixin text-preset-1-1 {
+	color: variables.$Slate-900;
+	font-family: 'Red Hat Display';
+	font-size: 4.8rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 110%; /* 70.4px */
 }
 
 @mixin text-preset-2 {
-	/* text-preset-2 */
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-size: 1.3rem;
+	color: variables.$Slate-900;
+	font-family: 'Red Hat Display';
+	font-size: 4rem;
 	font-style: normal;
-	font-weight: 500;
-	line-height: 110%; /* 14.3px */
+	font-weight: 900;
+	line-height: 110%; /* 44px */
 }
 
 @mixin text-preset-3 {
-	/* text-preset-3 */
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-size: 1.3rem;
+	color: variables.$Cyan-600;
+	font-family: 'Red Hat Display';
+	font-size: 1.6rem;
 	font-style: normal;
-	font-weight: 500;
-	line-height: 140%; /* 18.2px */
+	font-weight: 900;
+	line-height: 110%; /* 17.6px */
+	letter-spacing: 0.4rem;
+	text-transform: uppercase;
 }
 
 @mixin text-preset-4 {
-	/* text-preset-4 */
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-size: 1.1rem;
+	color: variables.$Slate-900;
+	font-family: 'Red Hat Display';
+	font-size: 1.8rem;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 110%; /* 12.1px */
+	line-height: 150%; /* 27px */
+}
+
+@mixin text-preset-4-1 {
+	color: variables.$Slate-600;
+	font-family: 'Red Hat Display';
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 27px */
+}
+
+@mixin text-preset-4-2 {
+	color: variables.$Slate-600;
+	font-family: 'Red Hat Display';
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 27px */
+}
+
+@mixin text-preset-5 {
+	color: variables.$Slate-900;
+	font-family: 'Red Hat Display';
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 150%; /* 24px */
 }
 
 @mixin big-device {

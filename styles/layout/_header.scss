@@ -1,0 +1,13 @@
+@use '../abstracts';
+
+.header {
+	display: grid;
+	justify-content: center;
+
+	@include abstracts.big-device {
+		padding-top: abstracts.$spacing-1000;
+	}
+	@include abstracts.medium-device-max {
+		padding-top: 4.8rem;
+	}
+}
