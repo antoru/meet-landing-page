@@ -1,6 +1,8 @@
 @use '../abstracts';
 
 .hero {
+
+	
 	@include abstracts.big-device {
 		display: grid;
 		grid-template-columns: 27.4% auto 27.4%;
@@ -96,7 +98,12 @@
 
 		.button {
 			& + .button {
-				margin-top: abstracts.$spacing-200;
+				@include abstracts.small-device {
+					margin-block-start: abstracts.$spacing-200;
+				}
+				@include abstracts.medium-device-min {
+					margin-inline-start: abstracts.$spacing-200;
+				}
 			}
 		}
 	}

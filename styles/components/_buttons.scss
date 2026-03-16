@@ -7,14 +7,31 @@
 	font-style: normal;
 	font-weight: 900;
 	line-height: 150%; /* 24px */
-    border-radius: 28px;
-
+	border-radius: 28px;
 	padding: abstracts.$spacing-200 abstracts.$spacing-500;
+
+	transition: background-color 0.3s;
 
 	&--blue {
 		background-color: abstracts.$Cyan-600;
+
+		span {
+			color: abstracts.$Cyan-300;
+		}
+
+		&:hover {
+			background-color: #71c0d4;
+		}
 	}
 	&--purple {
 		background-color: abstracts.$Purple-600;
+
+		span {
+			color: abstracts.$Purple-300;
+		}
+
+		&:hover {
+			background-color: #b18bdd;
+		}
 	}
 }
