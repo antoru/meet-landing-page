@@ -1,0 +1,89 @@
+@use '../abstracts';
+
+.meet {
+	margin: 0 auto;
+	width: 100%;
+
+	@include abstracts.big-device {
+		max-width: 77.7778%;
+		padding: abstracts.$spacing-700 0 abstracts.$spacing-900;
+	}
+
+	@include abstracts.medium-device {
+		max-width: 88.5417%;
+		padding: abstracts.$spacing-700 0 abstracts.$spacing-800;
+	}
+
+	@include abstracts.small-device {
+		max-width: 82.9333%;
+		padding: abstracts.$spacing-400 0 abstracts.$spacing-800;
+	}
+
+	&__gallery {
+		display: grid;
+		margin: abstracts.$spacing-800 0;
+
+		@include abstracts.big-device {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			column-gap: abstracts.$spacing-400;
+		}
+		@include abstracts.medium-device {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			column-gap: abstracts.$spacing-300;
+		}
+		@include abstracts.small-device {
+			grid-template-columns: repeat(auto-fill, minmax(39.4667%, 1fr));
+			gap: abstracts.$spacing-200;
+		}
+
+		.gallery {
+			&__item {
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+					border-radius: abstracts.$spacing-100;
+				}
+			}
+		}
+	}
+
+	&__infos {
+		text-align: center;
+
+		.infos {
+			&__preTitle {
+				@include abstracts.text-preset-3;
+
+				@include abstracts.medium-device {
+					font-size: 1.4rem;
+				}
+				@include abstracts.small-device {
+					font-size: 1.2rem;
+				}
+			}
+			&__title {
+				@include abstracts.text-preset-2;
+				max-width: 16ch;
+				margin: abstracts.$spacing-200 auto abstracts.$spacing-400;
+
+				@include abstracts.medium-device {
+					font-size: 3.6rem;
+				}
+				@include abstracts.small-device {
+					font-size: 3.2rem;
+				}
+			}
+			&__desc {
+				@include abstracts.text-preset-4;
+				color: abstracts.$Slate-600;
+				max-width: 42ch;
+				margin: 0 auto;
+
+				@include abstracts.medium-device-max {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+}

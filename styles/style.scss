@@ -13,7 +13,10 @@
 @use 'layout/main';
 @use 'layout/header';
 @use 'layout/layout';
+@use 'layout/meet';
+@use 'layout/footer';
 
 // 4. Components
 @use 'components/buttons';
+@use 'components/numbers';
 

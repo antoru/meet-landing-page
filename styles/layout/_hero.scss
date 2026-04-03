@@ -1,12 +1,19 @@
 @use '../abstracts';
 
 .hero {
-
-	
 	@include abstracts.big-device {
 		display: grid;
 		grid-template-columns: 27.4% auto 27.4%;
 		align-items: center;
+		padding: abstracts.$spacing-800 0;
+	}
+
+	@include abstracts.medium-device {
+		padding: abstracts.$spacing-800 0;
+	}
+
+	@include abstracts.small-device {
+		padding: abstracts.$spacing-800 0 abstracts.$spacing-400;
 	}
 
 	&__images {
@@ -95,16 +102,17 @@
 
 	&__actions {
 		margin-top: abstracts.$spacing-300;
+		display: grid;
+		gap: abstracts.$spacing-200;
 
-		.button {
-			& + .button {
-				@include abstracts.small-device {
-					margin-block-start: abstracts.$spacing-200;
-				}
-				@include abstracts.medium-device-min {
-					margin-inline-start: abstracts.$spacing-200;
-				}
-			}
+		@include abstracts.medium-device-min {
+			grid-template-columns: auto auto;
+			justify-content: center;
+		}
+
+		@include abstracts.small-device {
+			grid-template-rows: auto auto;
+			justify-items: center;
 		}
 	}
 }

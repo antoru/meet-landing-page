@@ -1,0 +1,22 @@
+@use '../abstracts';
+
+.number {
+	&__line {
+		width: 0.1rem;
+		height: abstracts.$spacing-1000;
+		background-color: abstracts.$Slate-300;
+		margin: 0 auto;
+	}
+	&__circle {
+		@include abstracts.text-preset-5;
+		width: abstracts.$spacing-700;
+		height: abstracts.$spacing-700;
+		border: 0.1rem solid abstracts.$Slate-300;
+		border-radius: 50%;
+		margin: 0 auto;
+		display: grid;
+		place-items: center;
+		color: abstracts.$Slate-600;
+		background: #f6f5f6;
+	}
+}

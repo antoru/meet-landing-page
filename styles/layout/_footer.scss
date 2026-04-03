@@ -1,0 +1,86 @@
+@use '../abstracts';
+
+.footer {
+	.footer__infos {
+		display: grid;
+		position: relative;
+		background-color: abstracts.$Cyan-600;
+		z-index: 1;
+
+		@include abstracts.big-device {
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: abstracts.$spacing-400;
+			align-items: center;
+			justify-items: center;
+			padding: abstracts.$spacing-1400 abstracts.$spacing-1000;
+		}
+		@include abstracts.medium-device-max {
+			text-align: center;
+			justify-items: center;
+			row-gap: abstracts.$spacing-300;
+			padding: abstracts.$spacing-800 abstracts.$spacing-400;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.1;
+			z-index: -1;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			@include abstracts.big-device {
+				background-image: url('../../images/desktop/image-footer.jpg');
+			}
+			@include abstracts.medium-device {
+				background-image: url('../../images/tablet/image-footer.jpg');
+			}
+			@include abstracts.small-device {
+				background-image: url('../../images/mobile/image-footer.jpg');
+			}
+		}
+
+		.infos {
+			&__title {
+				@include abstracts.text-preset-2;
+				color: abstracts.$White;
+
+				@include abstracts.big-device {
+					max-width: 12ch;
+				}
+
+				// margin: abstracts.$spacing-200 auto abstracts.$spacing-400;
+
+				@include abstracts.medium-device {
+					font-size: 3.6rem;
+				}
+				@include abstracts.small-device {
+					font-size: 3.2rem;
+				}
+			}
+			&__desc {
+				@include abstracts.text-preset-4;
+				color: abstracts.$White;
+
+				@include abstracts.big-device {
+					max-width: 30ch;
+				}
+
+				@include abstracts.medium-device-max {
+					font-size: 1.6rem;
+					max-width: 48ch;
+				}
+			}
+		}
+	}
+	.number {
+		margin-bottom: -2.8rem;
+		position: relative;
+		z-index: 2;
+	}
+}
