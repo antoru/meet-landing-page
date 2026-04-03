@@ -35,13 +35,13 @@
 			background-repeat: no-repeat;
 
 			@include abstracts.big-device {
-				background-image: url('../../images/desktop/image-footer.jpg');
+				background-image: url('../images/desktop/image-footer.jpg');
 			}
 			@include abstracts.medium-device {
-				background-image: url('../../images/tablet/image-footer.jpg');
+				background-image: url('../images/tablet/image-footer.jpg');
 			}
 			@include abstracts.small-device {
-				background-image: url('../../images/mobile/image-footer.jpg');
+				background-image: url('../images/mobile/image-footer.jpg');
 			}
 		}
 
